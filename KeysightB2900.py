@@ -79,9 +79,7 @@ class SMUChannel:
         Sets the source output state to off.
 
         Note:
-           When the output is switched off, the SMU goes in to low Z mode (meaning: the output is shorted).
-           Be careful when using the SMU for measurement of high power devices. The disabling of the output could lead
-           high current flow.
+           When the output is switched off, the SMU goes in to High Z mode (meaning: the output is opened).
         """
         self.smu._set_output_state(self.channel, KeysightB2900.STATE_OFF)
         
